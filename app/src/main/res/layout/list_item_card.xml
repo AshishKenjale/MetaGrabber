@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="15dp"
+	android:paddingRight="15dp"
+	android:descendantFocusability="beforeDescendants">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="15dp"
+		android:paddingTop="15dp"
+		android:paddingBottom="15dp"
+		android:paddingRight="15dp"
+		android:background="@drawable/card_background_selector"
+		android:descendantFocusability="afterDescendants">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:id="@+id/imageView"
+
+
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Title"
+                android:id="@+id/txtTitle"
+                android:textSize="@dimen/title"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_alignStart="@+id/txtDesc"
+                android:layout_marginLeft="@dimen/margin_small" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="This is sample description."
+                android:id="@+id/txtDesc"
+                android:layout_below="@+id/txtTitle"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dip"
+                android:textColor="@color/desc"
+                android:textSize="@dimen/desc"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_marginLeft="@dimen/margin_small" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View"
+                android:id="@+id/btnViewLink"
+                android:layout_below="@+id/txtDesc"
+                android:layout_alignEnd="@+id/txtDesc"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:id="@+id/btnLikeLink"
+                android:layout_below="@+id/txtDesc"
+                android:layout_toStartOf="@+id/btnViewLink"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>
